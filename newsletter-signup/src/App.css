@@ -9,7 +9,7 @@ form {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 480px 320px;
+  grid-template-columns: 460px 340px;
   background-color: white;
   color: hsl(235, 18%, 26%);
   width: 800px;
@@ -21,11 +21,12 @@ form {
   display: grid;
   margin-left: 10px;
   align-items: center;
-  height: 527px;
+  height: 350px;
 }
 
 h1 {
   margin-left: 40px;
+  margin-bottom: 0;
   font-size: 50px;
 }
 
@@ -35,13 +36,15 @@ p {
 }
 
 .message {
-  text-wrap: nowrap;
+  
 }
 .image {
  
 }
 .image img {
-  height: 100%;
+  height: 95%;
+  width: 92%;
+  margin: 13px 0px 0px 0;
 }
 ul {
   margin-left: 0;
@@ -50,8 +53,39 @@ ul {
   display: flex;
   padding: 5px;
   margin-left: 0;
+  font-weight: 500;
+  font-family: arial;
  }
 
  .list img {
   margin-right: 20px;
+ }
+ label {
+  margin-left: 40px;
+  font-size: 12px;
+  font-weight: 700;
+ }
+ input {
+  width: 320px;
+  height: 40px;
+  border-radius: 5px;
+  border-width: 1.5px;
+  border-color: rgb(241, 239, 239);
+  margin-top: 10px;
+  margin-left: 40px;
+ }
+
+ ::placeholder {
+  padding-left: 20px;
+ }
+
+ button {
+  margin-left: 40px;
+  margin-top: 10px;
+  width: 325px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
  }

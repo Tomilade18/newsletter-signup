@@ -20,7 +20,7 @@ function App() {
             <li className='list'><img src="./src/assets/icon-list.svg" alt="" />And much more</li>
            </ul>
             <label htmlFor="">
-              Email Address
+              Email address
             </label>
             <input type="text" placeholder='email@company.com'/>
             <button>Subscribe to monthly newsletter</button>

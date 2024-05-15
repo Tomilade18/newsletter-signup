@@ -22,7 +22,7 @@ function App() {
             <label htmlFor="">
               Email address
             </label>
-            <input type="text" placeholder='email@company.com'/>
+            <input type="email" placeholder='email@company.com'/>
             <button>Subscribe to monthly newsletter</button>
           </div>
           <div className='image'>

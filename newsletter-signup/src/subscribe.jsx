@@ -4,8 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Success from './success'
 
-function App() {
+function Subscribe() {
   const [count, setCount] = useState(0)
+  const handleclick = () => {
+    window.navigator('/subscribe/success')
+  }
 
   return (
     <>
@@ -24,7 +27,7 @@ function App() {
               Email address
             </label>
             <input type="email" placeholder='email@company.com'/>
-            <button>Subscribe to monthly newsletter</button>
+            <button onClick={handleclick}><a href='/subscribe/success'>Subscribe to monthly newsletter</a></button>
           </div>
           <div className='image'>
             <img src="./src/assets/illustration-sign-up-desktop.svg" alt="" />
@@ -37,4 +40,4 @@ function App() {
   )
 }
 
-export default subscribe
+export default Subscribe

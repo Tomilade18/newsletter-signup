@@ -1,40 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Success from './success'
+import "./App.css";
+import Subscribe from "./Subscribe";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Success from "./success";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [inputValue, setInputValue] = useState('');
+  // const navigate = useNavigate();
 
-  return (
-    <>
-      <div className=''>
-        <form action="">
-          <div className='input-field'> 
-          
-            <h1>Stay updated !</h1>
-            <p className='message'>Join 60000+ product managers receiving monthly updates on:</p>
-           <ul>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />product discovery and building what matters</li>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />measuring to ensure updates are a sucess</li>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />And much more</li>
-           </ul>
-            <label htmlFor="">
-              Email address
-            </label>
-            <input type="email" placeholder='email@company.com'/>
-            <button>Subscribe to monthly newsletter</button>
-          </div>
-          <div className='image'>
-            <img src="./src/assets/illustration-sign-up-desktop.svg" alt="" />
-          </div>
-         
-        </form>
-      </div>
-    </>
-   
-  )
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   // Handle form submission logic here
+  //   console.log(inputValue);
+  //   // Navigate to another route after submission
+  //   navigate('/new-route');
+  // }
+
+  return <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Subscribe />} />
+    <Route path="/subscribe/success" element={<Success />} />
+  </Routes>
+  </BrowserRouter>;
 }
 
-export default App
+export default App;

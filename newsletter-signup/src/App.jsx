@@ -1,5 +1,5 @@
 import "./App.css";
-import Subscribe from "./Subscribe";
+import Subscribe from "./subscribe";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Success from "./success";
 

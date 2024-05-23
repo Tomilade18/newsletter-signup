@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,9 +7,22 @@ import Success from './success'
 
 function Subscribe() {
   const [count, setCount] = useState(0)
-  const handleclick = () => {
-    window.navigator('/subscribe/success')
-  }
+  const navigate = useNavigate();
+
+  const [inputValue, setInputValue] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleClick = () => {
+    if (inputValue.length < 12) {
+      setErrorMessage('You don\'t have the required characters.');
+    } else {
+      navigate("/subscribe/success");
+    }
+  };
 
   return (
     <>
@@ -26,8 +40,9 @@ function Subscribe() {
             <label htmlFor="">
               Email address
             </label>
-            <input type="email" placeholder='email@company.com'/>
-            <button onClick={handleclick}><a href='/subscribe/success'>Subscribe to monthly newsletter</a></button>
+            <input type="email"   onChange={handleChange} placeholder='email@company.com'/>
+            <button onClick={() => {handleClick}}>Subscribe to monthly newsletter</button>
+            {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
           </div>
           <div className='image'>
             <img src="./src/assets/illustration-sign-up-desktop.svg" alt="" />

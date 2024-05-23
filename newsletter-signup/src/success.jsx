@@ -2,10 +2,10 @@ export default function Success() {
     
     return(
         <div className="success">
-        <img src="" alt="" />
-        <h1>Thanks for subscribing</h1>
-        <p></p>
-        <button></button>
+        <img src="./src/assets/icon-list.svg" alt="" className="success-image"/>
+        <h1 className="suc-head">Thanks for subscribing</h1>
+        <p className="suc-text">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription</p>
+        <button className="dismiss-btn"><a href="/">Dismiss Message</a></button>
         </div>
     )
 }

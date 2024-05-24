@@ -28,9 +28,9 @@ function Subscribe() {
           <h1>Stay updated!</h1>
           <p className='message'>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />Product discovery and building what matters</li>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />Measuring to ensure updates are a success</li>
-            <li className='list'><img src="./src/assets/icon-list.svg" alt="" />And much more</li>
+            <li className='list'><img src="./icon-list.svg" alt="" />Product discovery and building what matters</li>
+            <li className='list'><img src="./icon-list.svg" alt="" />Measuring to ensure updates are a success</li>
+            <li className='list'><img src="./icon-list.svg" alt="" />And much more</li>
           </ul>
           <label htmlFor="email">Email address</label>
           <input
@@ -43,7 +43,7 @@ function Subscribe() {
           {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
         </div>
         <div className='image'>
-          <img src="./src/assets/illustration-sign-up-desktop.svg" alt="" />
+          <img src="./illustration-sign-up-desktop.svg" alt="" />
         </div>
       </form>
     </div>
